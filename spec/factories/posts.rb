@@ -3,6 +3,8 @@ FactoryGirl.define do
     title { Faker::Name.name }
     description { Faker::Lorem.sentence(3, true, 4) }
     user_id { Faker::Number.number(4) }
+    category { Faker::Name.name }
+
 
     factory :post_with_longdescription do
       description { Faker::Lorem.paragraph }

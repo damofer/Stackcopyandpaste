@@ -10,7 +10,7 @@ RSpec.describe Post, type: :model do
 
     context "with invalid attributes" do
 
-      it "should not be valid" do
+      it "should not be valid without title and description" do
         @post = build(:post, title: "", description: "")
         expect(@post.save).to be false
       end
@@ -34,6 +34,16 @@ RSpec.describe Post, type: :model do
         @post = build(:post_with_longdescription)
         expect(@post.save).to be false
       end
+      
+           it "should not be valid with a category shorter than 2 chars" do
+       @post = build(:post, category: "H")
+        expect(@post.save).to be false
+      end
+            it "should not be valid without" do
+       @post = build(:post, category: "")
+        expect(@post.save).to be false
+      end
+
 
     end
 

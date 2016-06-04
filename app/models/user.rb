@@ -9,4 +9,10 @@ class User < ActiveRecord::Base
   end
   
   has_many :posts
+   validates :email, presence: true, length: {minimum: 1}
+ validates :firstname, presence: true, length: {minimum: 1}
+ validates :lastname, presence: true, length: {minimum: 1}
+ validates :username, presence: true, length: {minimum: 3}
+  validates_uniqueness_of :username
+  validates_uniqueness_of :email
 end
