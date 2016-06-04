@@ -34,6 +34,11 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'rspec-rails', '~> 3.0'
+  gem 'factory_girl_rails', '~> 4.7'
+  gem 'faker', '~> 1.6'
+  gem 'capybara', '~> 2.7'
+  gem 'cucumber-rails', '~> 1.4', :require => false
 end
 
 group :development do
@@ -46,5 +51,9 @@ group :development do
   gem 'foundation-rails', '~> 5.5', '>= 5.5.3.2'
   gem 'devise', '~> 4.1', '>= 4.1.0'
   gem 'letter_opener', '~> 1.4', '>= 1.4.1'
+  
+  group :test do
+    gem 'database_cleaner', '~> 1.5'
+  end
 end
 
