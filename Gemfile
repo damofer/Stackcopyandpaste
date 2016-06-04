@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'foundation-rails', '~> 5.5', '>= 5.5.3.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -43,5 +42,9 @@ group :development do
 
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
+  
+  gem 'foundation-rails', '~> 5.5', '>= 5.5.3.2'
+  gem 'devise', '~> 4.1', '>= 4.1.0'
+  gem 'letter_opener', '~> 1.4', '>= 1.4.1'
 end
 
